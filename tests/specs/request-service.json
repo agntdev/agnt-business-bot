@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Request service",
+    "steps": [
+      {
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "Initiate service request flow"
+            }
+          }
+        ],
+        "send": {
+          "callback": "request:service"
+        }
+      }
+    ]
+  }
+]
