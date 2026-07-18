@@ -1,19 +1,12 @@
 [
   {
-    "name": "Request service",
+    "name": "Request service shows service options",
     "steps": [
       {
+        "send": { "callback": "request:service" },
         "expect": [
-          {
-            "method": "sendMessage",
-            "payload": {
-              "text": "Initiate service request flow"
-            }
-          }
-        ],
-        "send": {
-          "callback": "request:service"
-        }
+          { "method": "sendMessage", "payload": { "text": "What do you need help with?" } }
+        ]
       }
     ]
   }

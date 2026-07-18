@@ -1,19 +1,12 @@
 [
   {
-    "name": "Place order",
+    "name": "Place order shows plan options",
     "steps": [
       {
+        "send": { "callback": "order:start" },
         "expect": [
-          {
-            "method": "sendMessage",
-            "payload": {
-              "text": "Initiate order placement flow"
-            }
-          }
-        ],
-        "send": {
-          "callback": "order:start"
-        }
+          { "method": "sendMessage", "payload": { "text": "Choose a plan:" } }
+        ]
       }
     ]
   }

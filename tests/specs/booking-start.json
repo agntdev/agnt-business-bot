@@ -1,19 +1,12 @@
 [
   {
-    "name": "Book time",
+    "name": "Book time shows date options",
     "steps": [
       {
+        "send": { "callback": "booking:start" },
         "expect": [
-          {
-            "method": "sendMessage",
-            "payload": {
-              "text": "Initiate booking flow with date/time selection"
-            }
-          }
-        ],
-        "send": {
-          "callback": "booking:start"
-        }
+          { "method": "sendMessage", "payload": { "text": "Pick a date for your booking:" } }
+        ]
       }
     ]
   }
